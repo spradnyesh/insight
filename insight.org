@@ -1,0 +1,58 @@
+#+STARTUP: overview
+#+FILETAGS: :dr-dr:
+
+* backlog
+* TODO design
+:CLOCK:
+CLOCK: [2016-10-24 Mon 04:20]--[2016-10-24 Mon 04:44] =>  0:24
+:END:
+** features
+*** basic
+**** store and retrieve data
+***** type-1: during registration
+***** type-2: on every visit
+**** search-able data-fields (or simply search across all fields?)
+*** advanced
+**** allow to add/remove fields
+***** customers won't pay monthly, unless i force (by not allowing them to use unless they pay)
+**** auto backup on cloud
+***** differentiate users (oauth2)
+** technical
+*** lein new re-frame dr-dr +cider +test +garden +secretary
+*** chrome app
+**** https://developer.chrome.com/apps/about_apps
+**** https://github.com/nwjs/nw.js/tree/master
+* learn
+** TODO [[https://github.com/tonsky/datascript][datascript]]
+:CLOCK:
+CLOCK: [2016-11-02 Wed 04:07]--[2016-11-02 Wed 05:45] =>  1:38
+:END:
+** TODO http://electron.atom.io/
+:CLOCK:
+CLOCK: [2016-10-24 Mon 04:44]--[2016-10-24 Mon 05:59] =>  1:15
+:END:
+** TODO [[https://github.com/boot-clj/boot#install][boot]]
+   :CLOCK:
+   CLOCK: [2016-11-15 Tue 05:35]--[2016-11-15 Tue 05:47] =>  0:12
+   CLOCK: [2016-11-15 Tue 05:20]--[2016-11-15 Tue 05:35] =>  0:15
+   CLOCK: [2016-11-13 Sun 05:20]--[2016-11-13 Sun 07:15] =>  1:55
+   :END:
+- https://seancorfield.github.io/blog/2016/02/02/boot-new/
+** [[https://github.com/plumatic/schema][schema]] / [[http://clojure.org/about/spec][clojure.spec]]
+*** http://www.lispcast.com/clojure.spec-vs-schema
+*** http://blog.cognitect.com/blog/2016/5/23/introducing-clojurespec
+*** https://github.com/slagyr/speclj
+** TODO [[https://github.com/mpdairy/posh][posh]]
+:CLOCK:
+- State "CANCELLED"  from "TODO"       [2016-11-15 Tue 05:43] \\
+  not maintained for a long time
+CLOCK: [2016-11-03 Thu 04:43]--[2016-11-03 Thu 05:02] =>  0:19
+CLOCK: [2016-11-03 Thu 04:05]--[2016-11-03 Thu 04:35] =>  0:30
+:END:
+*** https://github.com/mpdairy/posh-todo
+* trouble-shooting
+** TODO lighttable
+   :CLOCK:
+   CLOCK: [2016-11-04 Fri 05:40]--[2016-11-04 Fri 05:52] =>  0:12
+   CLOCK: [2016-11-03 Thu 07:00]--[2016-11-03 Thu 07:15] =>  0:15
+   :END:
