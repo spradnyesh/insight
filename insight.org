@@ -2,6 +2,19 @@
 #+FILETAGS: :dr-dr:
 
 * backlog
+** Archive :ARCHIVE:
+*** DONE initial setup
+    CLOSED: [2016-11-29 Tue 10:21]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2016-11-29 Tue 10:21
+    :END:
+    :CLOCK:
+    CLOCK: [2016-11-29 Tue 09:18]--[2016-11-29 Tue 09:30] =>  0:12
+    :END:
+ - lein new re-frame insight +cider +secretary +garden
+   - https://github.com/Day8/re-frame
+   - https://github.com/Day8/re-frame-template
+   - XXX https://seancorfield.github.io/blog/2016/02/02/boot-new/
 * TODO design
 :CLOCK:
 CLOCK: [2016-10-24 Mon 04:20]--[2016-10-24 Mon 04:44] =>  0:24
@@ -23,33 +36,44 @@ CLOCK: [2016-10-24 Mon 04:20]--[2016-10-24 Mon 04:44] =>  0:24
 **** https://developer.chrome.com/apps/about_apps
 **** https://github.com/nwjs/nw.js/tree/master
 * learn
-** TODO [[https://github.com/tonsky/datascript][datascript]]
-:CLOCK:
-CLOCK: [2016-11-02 Wed 04:07]--[2016-11-02 Wed 05:45] =>  1:38
-:END:
 ** TODO http://electron.atom.io/
 :CLOCK:
 CLOCK: [2016-10-24 Mon 04:44]--[2016-10-24 Mon 05:59] =>  1:15
 :END:
-** TODO [[https://github.com/boot-clj/boot#install][boot]]
+** TODO [[reagent][re-frame]]
    :CLOCK:
-   CLOCK: [2016-11-15 Tue 05:35]--[2016-11-15 Tue 05:47] =>  0:12
-   CLOCK: [2016-11-15 Tue 05:20]--[2016-11-15 Tue 05:35] =>  0:15
-   CLOCK: [2016-11-13 Sun 05:20]--[2016-11-13 Sun 07:15] =>  1:55
+   CLOCK: [2016-11-29 Tue 09:30]--[2016-11-29 Tue 10:21] =>  0:51
    :END:
-- https://seancorfield.github.io/blog/2016/02/02/boot-new/
+- https://github.com/Day8/re-frame
+  - https://github.com/Day8/re-frame/tree/master/examples
+  - https://github.com/Day8/re-frame/blob/master/docs/README.md
+- https://github.com/Day8/re-frame-template
+- XXX https://github.com/Day8/re-com
+- XXX https://github.com/kristianmandrup/slush-reframe
 ** [[https://github.com/plumatic/schema][schema]] / [[http://clojure.org/about/spec][clojure.spec]]
 *** http://www.lispcast.com/clojure.spec-vs-schema
 *** http://blog.cognitect.com/blog/2016/5/23/introducing-clojurespec
 *** https://github.com/slagyr/speclj
-** TODO [[https://github.com/mpdairy/posh][posh]]
-:CLOCK:
-- State "CANCELLED"  from "TODO"       [2016-11-15 Tue 05:43] \\
-  not maintained for a long time
-CLOCK: [2016-11-03 Thu 04:43]--[2016-11-03 Thu 05:02] =>  0:19
-CLOCK: [2016-11-03 Thu 04:05]--[2016-11-03 Thu 04:35] =>  0:30
-:END:
-*** https://github.com/mpdairy/posh-todo
+** deferred
+*** TODO [[https://github.com/boot-clj/boot#install][boot]]
+    :CLOCK:
+    CLOCK: [2016-11-15 Tue 05:35]--[2016-11-15 Tue 05:47] =>  0:12
+    CLOCK: [2016-11-15 Tue 05:20]--[2016-11-15 Tue 05:35] =>  0:15
+    CLOCK: [2016-11-13 Sun 05:20]--[2016-11-13 Sun 07:15] =>  1:55
+    :END:
+ - https://seancorfield.github.io/blog/2016/02/02/boot-new/
+*** TODO [[https://github.com/mpdairy/posh][posh]]
+ :CLOCK:
+ - State "CANCELLED"  from "TODO"       [2016-11-15 Tue 05:43] \\
+   not maintained for a long time
+ CLOCK: [2016-11-03 Thu 04:43]--[2016-11-03 Thu 05:02] =>  0:19
+ CLOCK: [2016-11-03 Thu 04:05]--[2016-11-03 Thu 04:35] =>  0:30
+ :END:
+****** https://github.com/mpdairy/posh-todo
+*** TODO [[https://github.com/tonsky/datascript][datascript]]
+ :CLOCK:
+ CLOCK: [2016-11-02 Wed 04:07]--[2016-11-02 Wed 05:45] =>  1:38
+ :END:
 * trouble-shooting
 ** TODO lighttable
    :CLOCK:

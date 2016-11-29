@@ -1,0 +1,1 @@
+(ns insight.core)
