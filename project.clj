@@ -13,7 +13,8 @@
 
   :source-paths ["src/clj"]
 
-  :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
+  :clean-targets ^{:protect false} ["resources/public/js/compiled"
+                                    "target"
                                     "resources/public/css"]
 
   :figwheel {:css-dirs ["resources/public/css"]}
@@ -26,39 +27,30 @@
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
 
-  :profiles
-  {:dev
-   {:dependencies [[binaryage/devtools "0.8.2"]
-                   [figwheel-sidecar "0.5.7"]
-                   [com.cemerick/piggieback "0.2.1"]]
+  :profiles {:dev
+             {:dependencies [[binaryage/devtools "0.8.2"]
+                             [figwheel-sidecar "0.5.7"]
+                             [com.cemerick/piggieback "0.2.1"]]
+              :figwheel     {:nrepl-port 7888}
+              :plugins      [[lein-figwheel "0.5.7"]
+                             [cider/cider-nrepl "0.13.0"]]}}
 
-    :plugins      [[lein-figwheel "0.5.7"]
-                   [cider/cider-nrepl "0.13.0"]]
-    }}
+  :cljsbuild {:builds
+              [{:id           "dev"
+                :source-paths ["src/cljs"]
+                :figwheel     {:on-jsload "insight.core/mount-root"}
+                :compiler     {:main                 insight.core
+                               :output-to            "resources/public/js/compiled/app.js"
+                               :output-dir           "resources/public/js/compiled/out"
+                               :asset-path           "js/compiled/out"
+                               :source-map-timestamp true
+                               :preloads             [devtools.preload]
+                               :external-config      {:devtools/config {:features-to-install :all}}}}
 
-  :cljsbuild
-  {:builds
-   [{:id           "dev"
-     :source-paths ["src/cljs"]
-     :figwheel     {:on-jsload "insight.core/mount-root"}
-     :compiler     {:main                 insight.core
-                    :output-to            "resources/public/js/compiled/app.js"
-                    :output-dir           "resources/public/js/compiled/out"
-                    :asset-path           "js/compiled/out"
-                    :source-map-timestamp true
-                    :preloads             [devtools.preload]
-                    :external-config      {:devtools/config {:features-to-install :all}}
-                    }}
-
-    {:id           "min"
-     :source-paths ["src/cljs"]
-     :compiler     {:main            insight.core
-                    :output-to       "resources/public/js/compiled/app.js"
-                    :optimizations   :advanced
-                    :closure-defines {goog.DEBUG false}
-                    :pretty-print    false}}
-
-
-    ]}
-
-  )
+               {:id           "min"
+                :source-paths ["src/cljs"]
+                :compiler     {:main            insight.core
+                               :output-to       "resources/public/js/compiled/app.js"
+                               :optimizations   :advanced
+                               :closure-defines {goog.DEBUG false}
+                               :pretty-print    false}}]})

@@ -15,6 +15,19 @@
    - https://github.com/Day8/re-frame
    - https://github.com/Day8/re-frame-template
    - XXX https://seancorfield.github.io/blog/2016/02/02/boot-new/
+*** DONE setup figwheel + cider
+    CLOSED: [2016-11-30 Wed 10:02]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2016-11-30 Wed 10:02
+    :END:
+    :CLOCK:
+    CLOCK: [2016-11-30 Wed 08:57]--[2016-11-30 Wed 10:02] =>  1:05
+    :END:
+ - steps
+   - shell: lein repl
+   - emacs: cider-connect (C-c M-c)
+   - repl: (require '[figwheel-sidecar.repl-api :as ra]) (ra/start-figwheel!) (ra/cljs-repl)
+   - .cljs file: cider-repl-set-ns (C-c M-n)
 * TODO design
 :CLOCK:
 CLOCK: [2016-10-24 Mon 04:20]--[2016-10-24 Mon 04:44] =>  0:24
