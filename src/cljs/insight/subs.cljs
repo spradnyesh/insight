@@ -3,5 +3,6 @@
     (:require [re-frame.core :as rf]))
 
 (rf/reg-sub
- :keys
- (fn [db [_ & keys]] (get-in @db keys)))
+ :path-to-map
+ (fn [db [_ & path-to-map]]
+   (reaction (get-in @db path-to-map))))

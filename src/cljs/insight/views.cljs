@@ -3,6 +3,6 @@
             [insight.subs]))
 
 (defn main-panel []
-  (let [name (rf/subscribe [:name])]
+  (let [name (rf/subscribe [:path-to-map :name])]
     (fn []
       [:div "Hello from " @name])))
