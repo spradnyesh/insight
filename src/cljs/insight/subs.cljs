@@ -1,8 +1,7 @@
 (ns insight.subs
     (:require-macros [reagent.ratom :refer [reaction]])
-    (:require [re-frame.core :as re-frame]))
+    (:require [re-frame.core :as rf]))
 
-(re-frame/reg-sub
- :name
- (fn [db]
-   (:name db)))
+(rf/reg-sub
+ :keys
+ (fn [db [_ & keys]] (get-in @db keys)))

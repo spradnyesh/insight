@@ -1,4 +1,4 @@
-(ns insight.db)
+(ns insight.db
+  (:require [reagent.core :as r]))
 
-(def default-db
-  {:name "re-frame"})
+(def app-db (r/atom {:name "re-frame"}))
