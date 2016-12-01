@@ -2,6 +2,14 @@
 #+FILETAGS: :dr-dr:
 
 * backlog
+** TODO get views and subscriptions to work
+   :CLOCK:
+   CLOCK: [2016-12-01 Thu 10:30]--[2016-12-01 Thu 10:51] =>  0:21
+   CLOCK: [2016-12-01 Thu 10:02]--[2016-12-01 Thu 10:30] =>  0:28
+   CLOCK: [2016-12-01 Thu 09:14]--[2016-12-01 Thu 10:02] =>  0:48
+   :END:
+- views + subscription breaks if i add "(reaction" to the subscription function
+- check against https://github.com/Day8/re-frame/tree/master/examples
 ** Archive :ARCHIVE:
 *** DONE initial setup
     CLOSED: [2016-11-29 Tue 10:21]
