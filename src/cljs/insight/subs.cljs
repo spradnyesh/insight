@@ -1,8 +1,13 @@
 (ns insight.subs
     (:require-macros [reagent.ratom :refer [reaction]])
-    (:require [re-frame.core :as rf]))
+    (:require [re-frame.core :as re-frame]))
 
-(rf/reg-sub
- :path-to-map
- (fn [db [_ & path-to-map]]
-   (reaction (get-in @db path-to-map))))
+(re-frame/reg-sub
+ :name
+ (fn [db]
+   (:name db)))
+
+(re-frame/reg-sub
+ :active-panel
+ (fn [db _]
+   (:active-panel db)))

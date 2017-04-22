@@ -1,7 +1,10 @@
 (ns insight.core
-    (:require [reagent.core :as r]
-              [re-frame.core :as rf]
+    (:require [reagent.core :as reagent]
+              [re-frame.core :as re-frame]
+              [re-frisk.core :refer [enable-re-frisk!]]
               [insight.events]
+              [insight.subs]
+              [insight.routes :as routes]
               [insight.views :as views]
               [insight.config :as config]))
 
@@ -9,12 +12,16 @@
 (defn dev-setup []
   (when config/debug?
     (enable-console-print!)
+    (enable-re-frisk!)
     (println "dev mode")))
 
 (defn mount-root []
-  (r/render [views/main-panel] (.getElementById js/document "app")))
+  (re-frame/clear-subscription-cache!)
+  (reagent/render [views/main-panel]
+                  (.getElementById js/document "app")))
 
 (defn ^:export init []
-  (rf/dispatch-sync [:initialize-db])
+  (routes/app-routes)
+  (re-frame/dispatch-sync [:initialize-db])
   (dev-setup)
   (mount-root))
