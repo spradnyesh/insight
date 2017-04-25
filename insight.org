@@ -67,6 +67,7 @@ CLOCK: [2016-10-24 Mon 04:44]--[2016-10-24 Mon 05:59] =>  1:15
 :END:
 ** TODO [[reagent][re-frame]]
    :CLOCK:
+   CLOCK: [2017-04-25 Tue 09:34]--[2017-04-25 Tue 10:15] =>  0:41
    CLOCK: [2017-04-22 Sat 16:39]--[2017-04-22 Sat 17:01] =>  0:22
    CLOCK: [2017-04-22 Sat 14:47]--[2017-04-22 Sat 16:19] =>  1:32
    CLOCK: [2016-11-29 Tue 09:30]--[2016-11-29 Tue 10:21] =>  0:51
@@ -77,10 +78,6 @@ CLOCK: [2016-10-24 Mon 04:44]--[2016-10-24 Mon 05:59] =>  1:15
 - https://github.com/Day8/re-frame-template
 - XXX https://github.com/Day8/re-com
 - XXX https://github.com/kristianmandrup/slush-reframe
-** TODO [[https://github.com/magomimmo/modern-cljs][modern-cljs]]
-   :CLOCK:
-   CLOCK: [2016-11-15 Tue 06:10]--[2016-11-15 Tue 07:03] =>  0:53
-   :END:
 ** [[https://github.com/gf3/secretary/][secretary]] + [[https://github.com/venantius/accountant][accountant]]
 ** [[https://github.com/plumatic/schema][schema]] / [[http://clojure.org/about/spec][clojure.spec]]
 *** http://www.lispcast.com/clojure.spec-vs-schema
@@ -108,6 +105,14 @@ CLOCK: [2016-10-24 Mon 04:44]--[2016-10-24 Mon 05:59] =>  1:15
  :CLOCK:
  CLOCK: [2016-11-02 Wed 04:07]--[2016-11-02 Wed 05:45] =>  1:38
  :END:
+** Archive :ARCHIVE:
+*** TODO [[https://github.com/magomimmo/modern-cljs][modern-cljs]]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2017-04-25 Tue 09:34
+    :END:
+    :CLOCK:
+    CLOCK: [2016-11-15 Tue 06:10]--[2016-11-15 Tue 07:03] =>  0:53
+    :END:
 * trouble-shooting
 ** cljs + cider
    - https://github.com/bhauman/lein-figwheel/wiki/Using-the-Figwheel-REPL-within-NRepl#integration-with-emacscider
