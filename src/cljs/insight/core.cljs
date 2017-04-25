@@ -11,12 +11,12 @@
 
 (defn dev-setup []
   (when config/debug?
+    (re-frame/clear-subscription-cache!)
     (enable-console-print!)
     (enable-re-frisk!)
     (println "dev mode")))
 
 (defn mount-root []
-  (re-frame/clear-subscription-cache!)
   (reagent/render [views/main-panel]
                   (.getElementById js/document "app")))
 
