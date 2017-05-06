@@ -4,3 +4,4 @@ figwheel_server.log
 target/
 resources/public/js/compiled/
 resources/public/css/screen.css
+resources/public/materialize/

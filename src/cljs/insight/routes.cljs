@@ -16,14 +16,12 @@
 
 (defn app-routes []
   (secretary/set-config! :prefix "#")
-  ;; --------------------
   ;; define routes here
   (defroute "/" []
     (re-frame/dispatch [:set-active-panel :home-panel]))
+  (defroute "/register" []
+    (re-frame/dispatch [:set-active-panel :register-panel]))
+  (defroute "/search" []
+    (re-frame/dispatch [:set-active-panel :search-panel]))
 
-  (defroute "/about" []
-    (re-frame/dispatch [:set-active-panel :about-panel]))
-
-
-  ;; --------------------
   (hook-browser-navigation!))

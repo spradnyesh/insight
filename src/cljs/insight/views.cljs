@@ -1,36 +1,42 @@
 (ns insight.views
-    (:require [re-frame.core :as re-frame]))
+  (:require [re-frame.core :as rf]
+            [insight.views.common :as vc]))
 
-
-;; home
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; views
 
 (defn home-panel []
-  (let [name (re-frame/subscribe [:name])]
+  (let [name (rf/subscribe [:name])]
     (fn []
-      [:div (str "Hello from " @name ". This is the Home Page.")
-       [:div [:a {:href "#/about"} "go to About Page"]]])))
+      [:div "This is the Home Page."])))
 
-
-;; about
-
-(defn about-panel []
+(defn register-panel []
   (fn []
-    [:div "This is the About Page."
-     [:div [:a {:href "#/"} "go to Home Page"]]]))
+    [:div "This is the Register Page."]))
 
+(defn search-panel []
+  (fn []
+    [:div "This is the Search Page."]))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; main
 
 (defn- panels [panel-name]
-  (case panel-name
-    :home-panel [home-panel]
-    :about-panel [about-panel]
-    [:div]))
+  [:div.container
+   [vc/header]
+   [:main
+    [vc/tabs]
+    (case panel-name
+      :home-panel [home-panel]
+      :register-panel [register-panel]
+      :search-panel [search-panel]
+      [:div])]
+   [vc/footer]])
 
 (defn show-panel [panel-name]
   [panels panel-name])
 
 (defn main-panel []
-  (let [active-panel (re-frame/subscribe [:active-panel])]
+  (let [active-panel (rf/subscribe [:active-panel])]
     (fn []
       [show-panel @active-panel])))
