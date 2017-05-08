@@ -7,6 +7,9 @@
                  [org.clojure/core.async "0.2.391"]
                  [secretary "1.2.3"]
                  [garden "1.3.2"]
+                 [bouncer "1.0.0"]
+                 [com.andrewmcveigh/cljs-time "0.4.0"]
+                 [jayq "2.5.4"]
                  [ns-tracker "0.3.0"]]
 
   :plugins [[lein-cljsbuild "1.1.4"]

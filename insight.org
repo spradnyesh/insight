@@ -2,20 +2,9 @@
 #+FILETAGS: :dr-dr:
 
 * backlog
-** TODO get views and subscriptions to work
+** TODO register page
    :CLOCK:
-   CLOCK: [2016-12-02 Fri 08:48]--[2016-12-02 Fri 09:18] =>  0:30
-   CLOCK: [2016-12-01 Thu 10:30]--[2016-12-01 Thu 10:51] =>  0:21
-   CLOCK: [2016-12-01 Thu 10:02]--[2016-12-01 Thu 10:30] =>  0:28
-   CLOCK: [2016-12-01 Thu 09:14]--[2016-12-01 Thu 10:02] =>  0:48
-   :END:
-- views + subscription breaks if i add "(reaction" to the subscription function
-- check against https://github.com/Day8/re-frame/tree/master/examples
-** TODO basic page structure
-   :CLOCK:
-   CLOCK: [2017-05-06 Sat 09:19]--[2017-05-06 Sat 09:51] =>  0:32
-   CLOCK: [2017-05-06 Sat 08:52]--[2017-05-06 Sat 09:17] =>  0:25
-   CLOCK: [2017-05-06 Sat 08:20]--[2017-05-06 Sat 08:52] =>  0:32
+   CLOCK: [2017-05-08 Mon 08:40]--[2017-05-08 Mon 10:10] =>  1:30
    :END:
 ** Archive :ARCHIVE:
 *** DONE initial setup
@@ -46,6 +35,29 @@
    - emacs: cider-connect (C-c M-c)
    - repl: (require '[figwheel-sidecar.repl-api :as ra]) (ra/start-figwheel!) (ra/cljs-repl)
    - .cljs file: cider-repl-set-ns (C-c M-n)
+*** DONE get views and subscriptions to work
+    CLOSED: [2017-05-08 Mon 08:41]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2017-05-08 Mon 08:41
+    :END:
+    :CLOCK:
+    CLOCK: [2016-12-02 Fri 08:48]--[2016-12-02 Fri 09:18] =>  0:30
+    CLOCK: [2016-12-01 Thu 10:30]--[2016-12-01 Thu 10:51] =>  0:21
+    CLOCK: [2016-12-01 Thu 10:02]--[2016-12-01 Thu 10:30] =>  0:28
+    CLOCK: [2016-12-01 Thu 09:14]--[2016-12-01 Thu 10:02] =>  0:48
+    :END:
+ - views + subscription breaks if i add "(reaction" to the subscription function
+ - check against https://github.com/Day8/re-frame/tree/master/examples
+*** DONE basic page structure
+    CLOSED: [2017-05-08 Mon 10:10]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2017-05-08 Mon 10:10
+    :END:
+    :CLOCK:
+    CLOCK: [2017-05-06 Sat 09:19]--[2017-05-06 Sat 09:51] =>  0:32
+    CLOCK: [2017-05-06 Sat 08:52]--[2017-05-06 Sat 09:17] =>  0:25
+    CLOCK: [2017-05-06 Sat 08:20]--[2017-05-06 Sat 08:52] =>  0:32
+    :END:
 * TODO design
 :CLOCK:
 CLOCK: [2016-10-24 Mon 04:20]--[2016-10-24 Mon 04:44] =>  0:24
