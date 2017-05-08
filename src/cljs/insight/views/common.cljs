@@ -8,9 +8,9 @@
   [:div.row.tabs
    [:div.col.s12
     [:ul.tabs
-     [:li.tab.col.s3 [:a [:a {:href "#/"} "Home"]]]
-     [:li.tab.col.s3 [:a [:a {:href "#/register"} "Register"]]]
-     [:li.tab.col.s3 [:a [:a {:href "#/search"} "Search"]]]]]])
+     [:li.tab.col.s3 [:a [:a {:href "#/"} "Register"]]]
+     [:li.tab.col.s3 [:a [:a {:href "#/search"} "Search"]]]
+     [:li.tab.col.s3 [:a [:a {:href "#/followup"} "Followup"]]]]]])
 
 (defn footer []
   ;; http://materializecss.com/footer.html
