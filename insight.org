@@ -4,6 +4,7 @@
 * backlog
 ** TODO register page
    :CLOCK:
+   CLOCK: [2017-05-18 Thu 08:12]--[2017-05-18 Thu 09:37] =>  1:25
    CLOCK: [2017-05-08 Mon 08:40]--[2017-05-08 Mon 10:10] =>  1:30
    :END:
 ** Archive :ARCHIVE:

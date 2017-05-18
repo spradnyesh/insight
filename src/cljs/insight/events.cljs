@@ -11,3 +11,8 @@
  :set-active-panel
  (fn [db [_ active-panel]]
    (assoc db :active-panel active-panel)))
+
+(re-frame/reg-event-db
+ :add-user
+ (fn [db [_ user]]
+   (update-in db [:users] conj user)))

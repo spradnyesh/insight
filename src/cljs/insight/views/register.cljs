@@ -10,16 +10,32 @@
 ;; helper functions
 
 (defn validate [state]
-  (b/validate state {:fname v/required
-                     :lname v/required
-                     :email [v/required v/email]
-                     :phone v/required
-                     :dob [v/required (v/datetime (:date ctf/formatters))]
-                     :addr v/required}))
+  (b/validate state {:fname [[v/required :message "First Name cannot be empty"]]
+                     :lname [[v/required :message "Last Name cannot be empty"]]
+                     :email [[v/required :message "Email cannot be empty"]
+                             [v/email :message "Email is not valid"]]
+                     :phone [[v/required :message "Phone cannot be empty"]
+                             [v/matches #"^\d{10}$" :message "Phone should be a 10 digit number"]]
+                     :dob   [[v/required :message "Birth Date cannot be empty"]
+                           (v/datetime (:date ctf/formatters))]
+                     :addr  [[v/required :message "Address cannot be empty"]]}))
 
-(defn show-errors [errors])
+(defn show-errors [errors]
+  [:div.modal
+   [:div.modal-content
+    [:h3 "Please correct the following errors before submitting"]
+    [:ul (doall (map-indexed (fn [i e]
+                               ^{:key i}[:li (first e)])
+                             (vals errors)))]]])
 
-(defn submit [state])
+(defn submit [state]
+  (let [users @(rf/subscribe [:users])
+        user (filter #(or (= (:phone %) (:phone state))
+                          (= (:email %) (:email state)))
+                     users)]
+    (if-not (empty? user)
+      (println "user already exists" user)
+      (rf/dispatch [:add-user state]))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; view
@@ -54,7 +70,7 @@
         [:div.row
          [:div.input-field.col.s6
           [:input {:type "date"
-                   :placeholder "Date of Birth"
+                   :placeholder "Birth Date"
                    :value (:dob @state)
                    :on-change #(swap! state assoc :dob (.. % -target -value))}]]
          [:div.input-field.col.s6
@@ -73,7 +89,7 @@
           {:type "button"
            :on-click (fn [e]
                        (let [[errors _] (validate @state)]
-                         ;; (println "@@@" errors)
+                         (println "validation errors: " errors)
                          (if errors
                            (show-errors errors)
                            (submit @state))))}
